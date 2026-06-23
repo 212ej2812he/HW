@@ -13,24 +13,24 @@ final int GAME     = 2;
 final int PAUSE    = 3;
 final int GAMEOVER = 4;
 
-// intro animation
+
 float a;
 
-// game entities
+
 float bx, by, bd;
 float vx, vy;
 
 float px, py, pd;
 
-// keyboard
+
 boolean akey, dkey;
 
-// score and lives
+
 int score;
 int lives;
 boolean win;
 
-// bricks
+
 int[] x;
 int[] y;
 boolean[] alive;
