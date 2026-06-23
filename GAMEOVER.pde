@@ -1,23 +1,24 @@
 void gameover() {
-  background(120, 0, 0);
+  background(purple);
 
-  fill(255);
-  textSize(70);
-  text("GAME OVER", width / 2, 150);
+  a = a + 0.03;
 
   textSize(45);
 
-  if (leftScore >= 3) {
-    text("Left Player Wins!", width / 2, 280);
-  } else if (rightScore >= 3) {
-    text("Right Player Wins!", width / 2, 280);
+  if (win == true) {
+    fill(green);
+    text("YOU WON!", width/2, 330);
+  } else {
+    fill(mango);
+    text("YOU LOST!", width/2, 330);
   }
 
-  textSize(35);
-  text(leftScore + " - " + rightScore, width / 2, 370);
+  fill(white);
+  textSize(30);
+  text("Final Score: " + score, width/2, 430);
 }
 
 void gameoverClicks() {
-  resetMatch();
+  resetGame();
   mode = INTRO;
 }
