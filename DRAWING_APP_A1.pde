@@ -1,4 +1,4 @@
-// palette of colors
+
 color cream        = #FCFBE3;
 color lightBrown   = #DDCAAA;
 color mediumBrown  = #BC8542;
