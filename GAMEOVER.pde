@@ -1,19 +1,23 @@
 void gameover() {
-  background(255, 0, 0);
+  background(120, 0, 0);
 
   fill(255);
-  textSize(80);
-  text("GAME OVER", 400, 280);
+  textSize(70);
+  text("GAME OVER", width / 2, 150);
 
-  textSize(40);
-  text("Score: " + score, 400, 420);
-  text("Highscore: " + highscore, 400, 480);
+  textSize(45);
 
-  textSize(30);
-  text("Click to return to Intro", 400, 600);
+  if (leftScore >= 3) {
+    text("Left Player Wins!", width / 2, 280);
+  } else if (rightScore >= 3) {
+    text("Right Player Wins!", width / 2, 280);
+  }
+
+  textSize(35);
+  text(leftScore + " - " + rightScore, width / 2, 370);
 }
 
 void gameoverClicks() {
-  resetGame();
+  resetMatch();
   mode = INTRO;
 }
